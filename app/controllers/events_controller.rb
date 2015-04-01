@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+	before_action :authenticate_user!
+	
 	def index
 		@events = Event.all
 			@hash = Gmaps4rails.build_markers(@events) do |event, marker|
@@ -20,15 +22,28 @@ class EventsController < ApplicationController
 	end
 
 	def new
-		@event = Event.new
+		@event = current_user.events.build
 	end
 
 	def create
-		@event = Event.new(event_params)
+		@event = current_user.events.build(event_params)
 		if @event.save
 			redirect_to @event
 		else
 			render :new
+		end
+	end
+
+	def edit
+		@event = Event.find(params[:id])
+	end
+
+	def update
+		@event = Event.find(params[:id])
+		if @event.update_attributes(event_params)
+			redirect_to @event
+		else
+			render :edit
 		end
 	end
 
