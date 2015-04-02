@@ -3,8 +3,10 @@
 
 <div>
 <%= content_tag :p, @event.name %>
-<%= content_tag :p, @event.description %>
-<%= content_tag :p, @event.address%>
+<p>Description<br/><br/><%= @event.description %></p>
+<p>Location<br/><br/><%= @event.address %></p>
+<p>Organized by<br/><br/><%= @user.username %></p>
+
 
 </div>
 
