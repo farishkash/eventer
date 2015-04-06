@@ -24,6 +24,7 @@ class EventsController < ApplicationController
       	end
 	end
 
+
 	def new
 		@event = current_user.events.build
 	end

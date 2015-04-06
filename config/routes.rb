@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'events#index'
-
+   get '/front' => 'events#front'
 
    
   # Example of regular route:
