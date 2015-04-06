@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -16,7 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'gmaps4rails'
 gem 'geocoder'
-
+gem 'font-awesome-rails', '~> 4.3.0.0'
+gem 'rails_12factor', group: :production
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -37,6 +38,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 group :development do
 	gem "better_errors"
+	gem 'binding_of_caller', '~> 0.7.2'
+	gem 'sqlite3'
 end
 
 group :development, :test do
