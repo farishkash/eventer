@@ -1,5 +1,5 @@
 
-
+<div class="col-lg-8">
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -7,27 +7,27 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %><br /><br />
+    <%= f.email_field :email, autofocus: true,  class:"black" %><br /><br />
     <%= f.label :username %><br />
-    <%= f.text_field :username %><br />
+    <%= f.text_field :username,  class:"black"%><br />
   </div>
 
-  <div class="field">
+  <div class="field ">
   <br />
     <%= f.label :password %><br />
     <% if @validatable %>
     <em>(<%= @minimum_password_length %> characters minimum)</em><br />
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %><br />
+    <%= f.password_field :password, autocomplete: "off",  class:"black" %><br />
   </div>
 
   <div class="field">
     <br /><%= f.label :password_confirmation %><br /><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off",  class:"black" %><br />
   </div>
 
   <div class="actions">
-    <br /><%= f.submit "Sign up" %>
+    <br /><%= f.submit "Sign up", class: 'btn btn-default' %>
   </div>
 <% end %>
 
@@ -35,3 +35,5 @@
 
 
 <%= render "devise/shared/links" %>
+
+</div>

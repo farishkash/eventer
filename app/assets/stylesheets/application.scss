@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require jquery-ui
  *= require_tree .
  *= require_self
  */
@@ -28,4 +29,52 @@
 .entry .col-lg-4 p {
   margin-right: 10px;
   margin-left: 10px;
+}
+
+.login {
+	margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+.eventform {
+	width: 940px;
+	margin-top:75px;
+}
+
+.eventlabel {
+	padding-top:10px;
+	padding-bottom:10px;
+    font-size:18px;
+    
+}
+.eventfield {
+	padding-top:10px;
+	padding-bottom:10px;
+    font-size:18px;
+   
+}
+.bluish {
+	color:#3276B1,
+}
+.su {
+	margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body {
+
+background-color:black;
+color:white;
+	
+}
+
+.navbar {
+	background-color:black;
+	color:white;
+}
+
+.black {
+	color:black;
 }

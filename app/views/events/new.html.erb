@@ -1,14 +1,47 @@
+<div class="eventform">
 <%= form_for (@event) do |f| %>
+<div class="row">
+<div class = "col-md-3 eventlabel">
 <%= f.label :name %>
-<%= f.text_field :name %>
+</div>
+<div class="col-md-5 eventfield">
+<%= f.text_field :name,  class:"black" %>
+</div>
+</div>
+<div class="row">
+<div class = "col-md-3 eventlabel">
 <%= f.label :description %>
-<%= f.text_field :description %>
+</div>
+<div class="col-md-5 eventfield">
+<%= f.text_area:description,  class:"black" %>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3 eventlabel">
 <%= f.label :address %>
-<%= f.text_field :address %>
+</div>
+<div class="col-md-5 eventfield">
+<%= f.text_field :address,  class:"black" %>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3 eventlabel">
 <%= f.label :date %>
-<%= f.date_field :date %>
+</div>
+<div class="col-md-5 eventfield">
+<%= f.date_field :date,  class:"black" %>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3 eventlabel">
 <%= f.label :time %>
-<%= f.time_field :time %>
-<%= f.submit %>
+</div>
+<div class="col-md-5 eventfield">
+<%= f.time_field :time,  class:"black" %>
+<%= f.submit "Create Event", class: 'btn btn-default'%>
+
+</div>
+</div>
 
 <% end %>
+</div>

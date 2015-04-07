@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render partial: "shared/navbar" %>
+<%= render partial: "shared/navbar" unless @disable_nav %>
 <div class="container">
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>

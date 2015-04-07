@@ -18,9 +18,8 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
-                        
-                    </li>
+                    
+                    <% if user_signed_in? %>
                     <li>
                         <%= link_to 'Find an Event', events_path %>
                     </li>
@@ -30,9 +29,12 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
-                    <% if user_signed_in? %>
                      <li>
                         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+                    </li>
+                    <% else %>
+                    <li>
+                        <%= link_to('Sign Up Today', new_user_registration_path)  %>
                     </li>
                     <% end %>
                     

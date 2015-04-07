@@ -13,6 +13,10 @@ class EventsController < ApplicationController
     	end
 	end
 
+	def front
+		@disable_nav = true
+	end
+
 	def show
 		@event = Event.find(params[:id])
 		@user = User.find(@event.user_id)

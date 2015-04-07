@@ -1,15 +1,38 @@
-<h2>Log in</h2>
-
+<%= stylesheet_link_tag "su" %>
+<div class ="container login"><h1>Welcome to Eventer</h1>
+<div class="entry">
+      <div class="row bluish">
+        <div class="col-lg-4">
+          <i class="fa fa-search fa-5x"></i>
+          <h2>Find an event</h2>
+          <p>Looking for an event in your area, just click on the link below and be taken</p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <i class="fa fa-birthday-cake fa-5x"></i>
+          <h2>Host an event.</h2>
+          <p>Birthday, Scrapbooking, etc.  List it Here!</p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <i class="fa fa-thumbs-o-up fa-5x"></i>
+          <h2>Eventer Pro</h2>
+          <p>Need to host more than 2 events a month, try eventer pro for $5 a month.  Coming Soon</p>
+          
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      </div><!-- /.container -->
+<div class="row">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
   <div class="field">
     <%= f.label :login %><br />
-    <%= f.text_field :login, autofocus: true %>
+    <%= f.text_field :login, autofocus: true,  class:"black" %>
   </div>
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off",  class:"black" %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
@@ -20,8 +43,10 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: 'btn btn-default' %>
   </div>
 <% end %>
+</div>
 
 <%= render "devise/shared/links" %>
+</div>
