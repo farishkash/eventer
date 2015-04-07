@@ -15,3 +15,17 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+
+.entry .col-lg-4 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.entry h2 {
+  font-weight: normal;
+}
+.entry .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
