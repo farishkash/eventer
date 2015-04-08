@@ -37,6 +37,10 @@
   text-align: center;
 
 }
+
+.down {
+	margin-top: 300px;
+}
 .eventform {
 	width: 940px;
 	margin-top:75px;
@@ -62,11 +66,19 @@
   margin-bottom: 20px;
   text-align: center;
 }
-
+.pushup {
+	margin-top: 25px;
+}
 body {
 
 background-color:black;
 color:white;
+background-image: url('eventbw.jpg');
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 	
 }
 
@@ -77,4 +89,8 @@ color:white;
 
 .black {
 	color:black;
+}
+
+.pushright {
+	margin-right:150px;
 }

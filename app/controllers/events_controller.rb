@@ -8,7 +8,7 @@ class EventsController < ApplicationController
 			@hash = Gmaps4rails.build_markers(@events) do |event, marker|
       		marker.lat event.latitude
       		marker.lng event.longitude
-      		marker.title event.name
+      		
       		marker.infowindow event.description
     	end
 	end
@@ -23,7 +23,7 @@ class EventsController < ApplicationController
 			@hash = Gmaps4rails.build_markers(@event) do |event, marker|
       		marker.lat event.latitude
       		marker.lng event.longitude
-      		marker.title event.name
+      		
       		marker.infowindow event.description
       	end
 	end
